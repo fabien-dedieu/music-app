@@ -1,16 +1,16 @@
 <template>
   <div id="app">
     <header>
-      <h1>My music</h1>
+      <h1>My Music By VueJS</h1>
     </header>
     <main>
      <section class="player">
        <h2 class="song-title">{{ current.title }} - <span>{{ current.artist }}</span></h2>
        <div class="control">
-         <button class="prev" @click="prev">Prev</button>
-         <button class="play" v-if="!isPlaying" @click="play">Play</button>
-         <button class="pause" v-else @click="pause">Pause</button>
-         <button class="next" @click="next">Next</button>
+         <button class="prev btn" @click="prev">Prev</button>
+         <button class="play btn" v-if="!isPlaying" @click="play">Play</button>
+         <button class="pause btn" v-else @click="pause">Pause</button>
+         <button class="next btn" @click="next">Next</button>
        </div>
      </section>
      <section class="playlist">
@@ -107,11 +107,17 @@ body {
 }
 header {
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 15px;
   background-color: #212121;
   color: #FFF;
+  margin: 0%;
+}
+h1{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 main{
   width: 100%;
@@ -122,7 +128,7 @@ main{
 
 .song-title{
   color: #53565a;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -136,6 +142,7 @@ main{
   justify-content: center;
   align-items: center;
   padding: 30px 25px;
+  margin: 0;
 }
 button{
   appearance: none;
